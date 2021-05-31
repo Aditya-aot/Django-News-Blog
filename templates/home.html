@@ -15,15 +15,12 @@
         
 
 
+  
+  
 
+  {% for key , value in news.items %}
 
-
-
-
-    {% for task in task_data %}
-   
-
-        <section class="text-gray-600 body-font overflow-hidden">
+    <section class="text-gray-600 body-font overflow-hidden">
   <div class="container px-2 py-4 mx-auto">
     <div class="-my-8 divide-y-2 divide-gray-100">
       <div class="py-8 flex flex-wrap md:flex-nowrap">
@@ -33,13 +30,13 @@
           <span class="mt-1 text-gray-500 text-sm">{{task.pub_date}}</span>
         </div>
         <div class="md:flex-grow">
-          <p class="leading-relaxed"> {{task.task}} </p>
+          <p class="leading-relaxed"> {{value.0}} </p>
           
           <form action="/delete/{{task.id}}/" method="post"> {% csrf_token %}
         <p> <input type="submit" value="Delete" class="btn btn-success" /> </p>
           </form>
           
-          <a class="text-indigo-500 inline-flex items-center mt-4">Learn More
+          <a class="text-indigo-500 inline-flex items-center mt-4"><a href="https://www.bbc.com{{value.1}}">Learn More </a>
             <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h14"></path>
               <path d="M12 5l7 7-7 7"></path>
@@ -51,8 +48,11 @@
 </section>
 
 <hr>
+  
+   
+  {% endfor %}
 
-    {% endfor %}
+    
 
 
  
