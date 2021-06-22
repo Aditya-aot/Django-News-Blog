@@ -2,7 +2,7 @@
 from django.shortcuts import render
 from .models import task_model
 from .forms import TaskForm
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect 
 
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -17,7 +17,7 @@ def home(request):
         form = TaskForm(request.POST)
         if form.is_valid():
             form.save()
-
+#  aditya
 
     #  
     url='https://www.bbc.com/news/world/asia'
