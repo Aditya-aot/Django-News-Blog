@@ -18,8 +18,8 @@ def home(request):
         if form.is_valid():
             form.save()
 #  aditya sharma
+# aditya
 
-    #  
     url='https://www.bbc.com/news/world/asia'
     page = requests.get(url)
     page
