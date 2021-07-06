@@ -17,7 +17,7 @@ def home(request):
         form = TaskForm(request.POST)
         if form.is_valid():
             form.save()
-#  aditya sharma
+#  aditya 
 # aditya
 
     url='https://www.bbc.com/news/world/asia'
